@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700&display=swap");
+
+:root {
+  --gradient: linear-gradient(to right bottom, #326088, #181b2b);
+  --gradient_1: #8ee02f;
+  --gradient_2: #ebad27;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to top, rgb(20, 26, 39), rgb(64, 78, 102));
+  color: white;
+  user-select: none;
+  font-family: "Nunito", sans-serif;
+}
+
+.timer {
+  background: var(--gradient);
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: rgb(7, 7, 7) 0 25px 30px;
+}
+
+.timer__title {
+  font-size: 48px;
+  justify-content: center;
+  display: flex;
+  text-shadow: rgb(95, 95, 95) 0px 5px 5px;
+}
+
+.timer__box {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.timer__item {
+  position: relative;
+  width: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.timer__item:not(:last-child) {
+  margin-right: 16px;
+}
+
+.timer__circle {
+  --size: 70px;
+  width: var(--size);
+  height: var(--size);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer__num {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1em;
+  position: relative;
+
+  /* цифри градієнт
+
+     background: linear-gradient(-125deg, rgb(244, 245, 242),rgb(179, 179, 179) );
+     background-clip: text;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color:transparent;
+      */
+}
+
+.timer__name {
+  margin-top: 16px;
+  font-weight: 300;
+}
+
+/*circle / кільце-градієнт*/
+.circle {
+  --offset: -10px;
+  position: absolute;
+  top: var(--offset);
+  right: var(--offset);
+  bottom: var(--offset);
+  left: var(--offset);
+  transform: rotate(-90deg);
+}
+
+.segment {
+  fill: rgb(0, 0, 0, 0.3);
+  stroke: url(#gradient);
+  stroke-width: 1px;
+  stroke-dasharray: 60 60;
+  stroke-linecap: round;
+  transform: scale(4.7);
+  transform-origin: center;
+  transition: stroke-dasharray 1s linear;
+}
+
+.gradient_1 {
+  stop-color: var(--gradient_1);
+}
+
+.gradient_2 {
+  stop-color: var(--gradient_2);
+}

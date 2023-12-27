@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Таймер зворотнього відліку</title>
+</head>
+
+<body>
+    <div class="timer">
+        <div class="timer__title">Таймер</div>
+
+        <div class="timer__box">
+            <div id="days" class="timer__item">
+                <div class="timer__circle">
+                    <!--кільце-градієнт SVG-->
+                    <svg class="circle" viewBox="0 0 100 100">
+                        <lineargradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop class="gradient_1" offset="0%"></stop>
+                            <stop class="gradient_2" offset="100%"></stop>
+                        </lineargradient>
+                        <circle class="segment" r="9.55%" cx="50%" cy="50%"></circle>
+                    </svg>
+                    <!--кільце-градієнт SVG-->
+                    <div class="timer__num">0</div>
+                </div>
+                <div class="timer__name">Дні</div>
+            </div>
+
+            <div id="hours" class="timer__item">
+                <div class="timer__circle">
+                    <!--кільце-градієнт SVG-->
+                    <svg class="circle" viewBox="0 0 100 100">
+                        <lineargradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop class="gradient_1" offset="0%"></stop>
+                            <stop class="gradient_2" offset="100"></stop>
+                        </lineargradient>
+                        <circle class="segment" r="9.55%" cx="50%" cy="50%"></circle>
+                    </svg>
+                    <!--кільце-градієнт SVG-->
+                    <div class="timer__num">0</div>
+                </div>
+                <div class="timer__name">Години</div>
+            </div>
+
+            <div id="minutes" class="timer__item">
+                <div class="timer__circle">
+                    <!--кільце-градієнт SVG-->
+                    <svg class="circle" viewBox="0 0 100 100">
+                        <lineargradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop class="gradient_1" offset="0%"></stop>
+                            <stop class="gradient_2" offset="100%"></stop>
+                        </lineargradient>
+                        <circle class="segment" r="9.55%" cx="50%" cy="50%"></circle>
+                    </svg>
+                    <!--кільце-градієнт SVG-->
+                    <div class="timer__num">0</div>
+                </div>
+                <div class="timer__name">Хвилини</div>
+            </div>
+
+            <div id="seconds" class="timer__item">
+                <div class="timer__circle">
+                    <!--кільце-градієнт SVG-->
+                    <svg class="circle" viewBox="0 0 100 100">
+                        <lineargradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop class="gradient_1" offset="0%"></stop>
+                            <stop class="gradient_2" offset="100%"></stop>
+                        </lineargradient>
+                        <circle class="segment" r="9.55%" cx="50%" cy="50%"></circle>
+                    </svg>
+                    <!--кільце-градієнт SVG-->
+                    <div class="timer__num">0</div>
+                </div>
+                <div class="timer__name">Секунди</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
